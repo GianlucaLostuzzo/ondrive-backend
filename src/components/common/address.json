@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_common_addresses",
+  "info": {
+    "displayName": "address",
+    "icon": "pinMap"
+  },
+  "options": {},
+  "attributes": {
+    "via": {
+      "type": "string",
+      "required": true
+    },
+    "numero": {
+      "type": "string",
+      "required": true
+    },
+    "citta": {
+      "type": "string",
+      "required": true
+    },
+    "provincia": {
+      "type": "string",
+      "required": true
+    },
+    "cap": {
+      "type": "string",
+      "maxLength": 5
+    },
+    "nazione": {
+      "type": "string"
+    },
+    "place_id": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "string"
+    },
+    "lon": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_common_enterprise_data",
+  "info": {
+    "displayName": "enterprise_data",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "vatnumber": {
+      "type": "string",
+      "maxLength": 11
+    }
+  },
+  "config": {}
+}

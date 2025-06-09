@@ -11,10 +11,25 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "vatnumber": {
-      "type": "string",
-      "maxLength": 11,
-      "unique": false
+    "company_data": {
+      "type": "component",
+      "component": "common.enterprise-data",
+      "repeatable": false
+    },
+    "address": {
+      "type": "component",
+      "component": "common.address",
+      "repeatable": false
+    },
+    "opening_days": {
+      "type": "component",
+      "component": "common.work-time",
+      "repeatable": true
+    },
+    "services": {
+      "type": "component",
+      "component": "common.services",
+      "repeatable": true
     }
   }
 }

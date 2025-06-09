@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_common_work_times",
+  "info": {
+    "displayName": "work_time",
+    "icon": "clock"
+  },
+  "options": {},
+  "attributes": {
+    "days": {
+      "type": "enumeration",
+      "enum": [
+        "Lun",
+        "Mar",
+        "Mer",
+        "Gio",
+        "Ven",
+        "Sab",
+        "Dom"
+      ]
+    },
+    "opening_hour": {
+      "type": "string"
+    },
+    "closing_hour": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

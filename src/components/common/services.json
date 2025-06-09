@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_common_services",
+  "info": {
+    "displayName": "services",
+    "icon": "rocket"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
