@@ -1,72 +1,72 @@
-import type { Schema, Struct } from '@strapi/strapi';
+import type { Attribute, Schema } from '@strapi/strapi';
 
-export interface CommonAddress extends Struct.ComponentSchema {
+export interface CommonAddress extends Schema.Component {
   collectionName: 'components_common_addresses';
   info: {
     displayName: 'address';
     icon: 'pinMap';
   };
   attributes: {
-    cap: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
+    cap: Attribute.String &
+      Attribute.SetMinMaxLength<{
         maxLength: 5;
       }>;
-    citta: Schema.Attribute.String & Schema.Attribute.Required;
-    lat: Schema.Attribute.String;
-    lon: Schema.Attribute.String;
-    nazione: Schema.Attribute.String;
-    numero: Schema.Attribute.String & Schema.Attribute.Required;
-    place_id: Schema.Attribute.String;
-    provincia: Schema.Attribute.String & Schema.Attribute.Required;
-    via: Schema.Attribute.String & Schema.Attribute.Required;
+    citta: Attribute.String & Attribute.Required;
+    lat: Attribute.String;
+    lon: Attribute.String;
+    nazione: Attribute.String;
+    numero: Attribute.String & Attribute.Required;
+    place_id: Attribute.String;
+    provincia: Attribute.String & Attribute.Required;
+    via: Attribute.String & Attribute.Required;
   };
 }
 
-export interface CommonEnterpriseData extends Struct.ComponentSchema {
+export interface CommonEnterpriseData extends Schema.Component {
   collectionName: 'components_common_enterprise_data';
   info: {
     displayName: 'enterprise_data';
     icon: 'archive';
   };
   attributes: {
-    name: Schema.Attribute.String;
-    vatnumber: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
+    name: Attribute.String;
+    vatnumber: Attribute.String &
+      Attribute.SetMinMaxLength<{
         maxLength: 11;
       }>;
   };
 }
 
-export interface CommonServices extends Struct.ComponentSchema {
+export interface CommonServices extends Schema.Component {
   collectionName: 'components_common_services';
   info: {
     displayName: 'services';
     icon: 'rocket';
   };
   attributes: {
-    description: Schema.Attribute.Text;
-    name: Schema.Attribute.String;
+    description: Attribute.Text;
+    name: Attribute.String;
   };
 }
 
-export interface CommonWorkTime extends Struct.ComponentSchema {
+export interface CommonWorkTime extends Schema.Component {
   collectionName: 'components_common_work_times';
   info: {
     displayName: 'work_time';
     icon: 'clock';
   };
   attributes: {
-    closing_hour: Schema.Attribute.String;
-    days: Schema.Attribute.Enumeration<
+    closing_hour: Attribute.String;
+    days: Attribute.Enumeration<
       ['Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab', 'Dom']
     >;
-    opening_hour: Schema.Attribute.String;
+    opening_hour: Attribute.String;
   };
 }
 
-declare module '@strapi/strapi' {
-  export module Public {
-    export interface ComponentSchemas {
+declare module '@strapi/types' {
+  export module Shared {
+    export interface Components {
       'common.address': CommonAddress;
       'common.enterprise-data': CommonEnterpriseData;
       'common.services': CommonServices;

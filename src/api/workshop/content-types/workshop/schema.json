@@ -4,7 +4,8 @@
   "info": {
     "singularName": "workshop",
     "pluralName": "workshops",
-    "displayName": "Workshop"
+    "displayName": "Workshop",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -34,6 +35,16 @@
     "slug": {
       "type": "uid",
       "required": true
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
