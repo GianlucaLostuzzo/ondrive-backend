@@ -30,6 +30,10 @@
       "type": "component",
       "component": "common.services",
       "repeatable": true
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
     }
   }
 }

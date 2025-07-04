@@ -435,6 +435,7 @@ export interface ApiWorkshopWorkshop extends Struct.CollectionTypeSchema {
     opening_days: Schema.Attribute.Component<'common.work-time', true>;
     publishedAt: Schema.Attribute.DateTime;
     services: Schema.Attribute.Component<'common.services', true>;
+    slug: Schema.Attribute.UID & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
