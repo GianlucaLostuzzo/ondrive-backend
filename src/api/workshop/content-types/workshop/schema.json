@@ -26,6 +26,11 @@
       "component": "common.work-time",
       "repeatable": true
     },
+    "type": {
+      "type": "component",
+      "component": "common.type",
+      "repeatable": true
+    },
     "services": {
       "type": "component",
       "component": "common.services",
@@ -44,6 +49,9 @@
         "videos",
         "audios"
       ]
+    },
+    "bio": {
+      "type": "richtext"
     }
   }
 }

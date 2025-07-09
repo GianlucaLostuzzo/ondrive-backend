@@ -29,6 +29,7 @@ export interface CommonEnterpriseData extends Struct.ComponentSchema {
     icon: 'archive';
   };
   attributes: {
+    email: Schema.Attribute.Email;
     name: Schema.Attribute.String;
     vatnumber: Schema.Attribute.String &
       Schema.Attribute.SetMinMaxLength<{
@@ -49,6 +50,26 @@ export interface CommonServices extends Struct.ComponentSchema {
   };
 }
 
+export interface CommonType extends Struct.ComponentSchema {
+  collectionName: 'components_common_types';
+  info: {
+    displayName: 'type';
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<
+      [
+        'Meccanico',
+        'Elettrauto',
+        'Carrozzeria',
+        'Gommista',
+        'Soccorso stradale',
+        'Moto',
+      ]
+    > &
+      Schema.Attribute.DefaultTo<'Meccanico'>;
+  };
+}
+
 export interface CommonWorkTime extends Struct.ComponentSchema {
   collectionName: 'components_common_work_times';
   info: {
@@ -57,9 +78,7 @@ export interface CommonWorkTime extends Struct.ComponentSchema {
   };
   attributes: {
     closing_hour: Schema.Attribute.String;
-    days: Schema.Attribute.Enumeration<
-      ['Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab', 'Dom']
-    >;
+    days: Schema.Attribute.Enumeration<['Lun - Ven', 'Sab']>;
     opening_hour: Schema.Attribute.String;
   };
 }
@@ -70,6 +89,7 @@ declare module '@strapi/strapi' {
       'common.address': CommonAddress;
       'common.enterprise-data': CommonEnterpriseData;
       'common.services': CommonServices;
+      'common.type': CommonType;
       'common.work-time': CommonWorkTime;
     }
   }

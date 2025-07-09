@@ -9,13 +9,8 @@
     "days": {
       "type": "enumeration",
       "enum": [
-        "Lun",
-        "Mar",
-        "Mer",
-        "Gio",
-        "Ven",
-        "Sab",
-        "Dom"
+        "Lun - Ven",
+        "Sab"
       ]
     },
     "opening_hour": {

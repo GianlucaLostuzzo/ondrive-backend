@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_common_types",
+  "info": {
+    "displayName": "type"
+  },
+  "options": {},
+  "attributes": {
+    "category": {
+      "type": "enumeration",
+      "default": "Meccanico",
+      "enum": [
+        "Meccanico",
+        "Elettrauto",
+        "Carrozzeria",
+        "Gommista",
+        "Soccorso stradale",
+        "Moto"
+      ]
+    }
+  },
+  "config": {}
+}

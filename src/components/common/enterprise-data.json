@@ -12,6 +12,9 @@
     "vatnumber": {
       "type": "string",
       "maxLength": 11
+    },
+    "email": {
+      "type": "email"
     }
   },
   "config": {}

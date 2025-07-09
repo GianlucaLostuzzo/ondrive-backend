@@ -385,6 +385,7 @@ export interface ApiWorkshopWorkshop extends Struct.CollectionTypeSchema {
   };
   attributes: {
     address: Schema.Attribute.Component<'common.address', false>;
+    bio: Schema.Attribute.RichText;
     company_data: Schema.Attribute.Component<'common.enterprise-data', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -403,6 +404,7 @@ export interface ApiWorkshopWorkshop extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     services: Schema.Attribute.Component<'common.services', true>;
     slug: Schema.Attribute.UID & Schema.Attribute.Required;
+    type: Schema.Attribute.Component<'common.type', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
