@@ -15,6 +15,12 @@
     },
     "email": {
       "type": "email"
+    },
+    "whatsapp": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
     }
   },
   "config": {}

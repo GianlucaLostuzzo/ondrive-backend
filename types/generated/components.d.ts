@@ -31,10 +31,12 @@ export interface CommonEnterpriseData extends Struct.ComponentSchema {
   attributes: {
     email: Schema.Attribute.Email;
     name: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
     vatnumber: Schema.Attribute.String &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 11;
       }>;
+    whatsapp: Schema.Attribute.String;
   };
 }
 

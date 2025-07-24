@@ -400,6 +400,7 @@ export interface ApiWorkshopWorkshop extends Struct.CollectionTypeSchema {
       'api::workshop.workshop'
     > &
       Schema.Attribute.Private;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     opening_days: Schema.Attribute.Component<'common.work-time', true>;
     publishedAt: Schema.Attribute.DateTime;
     services: Schema.Attribute.Component<'common.services', true>;
