@@ -1,39 +1,37 @@
+// ./config/middlewares.ts
 export default [
-  'strapi::logger',
   'strapi::errors',
   {
-    name: "strapi::security",
+    name: 'strapi::security',
     config: {
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          "connect-src": ["'self'", "https:"],
-          "img-src": [
+          'default-src': ["'self'"],
+          'connect-src': ["'self'", 'https:'],
+          'img-src': [
             "'self'",
-            "data:",
-            "blob:",
-            "dl.airtable.com",
-            "market-assets.strapi.io",
-            "ondrive-backend.s3.eu-central-1.amazonaws.com",
-            "s3.eu-central-1.amazonaws.com",
+            'data:',
+            'blob:',
+            'https:',
+            'market-assets.strapi.io',
+            '*.amazonaws.com',
           ],
-          "media-src":[
+          'media-src': [
             "'self'",
-            "data:",
-            "blob:",
-            "dl.airtable.com",
-            "market-assets.strapi.io",
-            "ondrive-backend.s3.eu-central-1.amazonaws.com",
-            "s3.eu-central-1.amazonaws.com",
+            'data:',
+            'blob:',
+            'https:',
+            '*.amazonaws.com',
           ],
           upgradeInsecureRequests: null,
         },
       },
     },
   },
-  'strapi::security',
   'strapi::cors',
   'strapi::poweredBy',
+  'strapi::logger',
   'strapi::query',
   'strapi::body',
   'strapi::session',
