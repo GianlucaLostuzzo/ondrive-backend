@@ -9,25 +9,28 @@ export default {
     }
 
     try {
+      console.log('📤 Tentativo invio email...');
+      
       await strapi.plugin('email').service('email').send({
-        to: 'info@ondrive.it', // 📥 Destinatario finale
-        from: 'no-reply@ondrive.it', // ⚠️ Deve corrispondere alla casella Aruba
+        to: 'info@ondrive.it',
+        from: 'no-reply@ondrive.it',
         subject: `Nuovo messaggio da ${nome}`,
         text: `
-          Hai ricevuto un nuovo messaggio dal sito ONDRIVE:
+Hai ricevuto un nuovo messaggio dal sito ONDRIVE:
 
-          Nome: ${nome}
-          Email: ${email}
+📧 Email: ${email}
 
-          Messaggio:
-          ${messaggio}
+💬 Messaggio:
+${messaggio}
         `,
       });
 
-      return ctx.send({ ok: true, message: 'Messaggio inviato correttamente' });
+      console.log('✅ Email inviata correttamente');
+
+      return ctx.send({ ok: true });
     } catch (error) {
-      console.error('Errore invio email:', error);
-      return ctx.internalServerError('Errore durante l’invio del messaggio');
+      console.error('❌ Errore invio email:', error);
+      return ctx.internalServerError('Errore durante l’invio');
     }
   },
 };
