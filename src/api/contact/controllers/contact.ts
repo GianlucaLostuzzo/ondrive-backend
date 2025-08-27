@@ -12,7 +12,7 @@ export default {
       console.log('📤 Tentativo invio email...');
       
       await strapi.plugin('email').service('email').send({
-        to: 'info@ondrive.it',
+        to: 'gianluca.lostuzzo@gmail.com',
         from: 'no-reply@ondrive.it',
         subject: `Nuovo messaggio da ${nome}`,
         text: `
