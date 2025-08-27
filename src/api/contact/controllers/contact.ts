@@ -2,6 +2,8 @@ export default {
   async send(ctx) {
     const { nome, email, messaggio } = ctx.request.body;
 
+    console.log('📥 Richiesta ricevuta:', { nome, email, messaggio });
+
     if (!nome || !email || !messaggio) {
       return ctx.badRequest('Tutti i campi sono obbligatori.');
     }
