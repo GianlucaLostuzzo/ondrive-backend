@@ -66,6 +66,10 @@ export interface CommonType extends Struct.ComponentSchema {
         'Gommista',
         'Soccorso stradale',
         'Moto',
+        'Clima',
+        'Cambio automatico',
+        'Diagnosi',
+        'Revisione',
       ]
     > &
       Schema.Attribute.DefaultTo<'Meccanico'>;

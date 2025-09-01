@@ -14,7 +14,11 @@
         "Carrozzeria",
         "Gommista",
         "Soccorso stradale",
-        "Moto"
+        "Moto",
+        "Clima",
+        "Cambio automatico",
+        "Diagnosi",
+        "Revisione"
       ]
     }
   },
