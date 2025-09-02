@@ -70,6 +70,7 @@ export interface CommonType extends Struct.ComponentSchema {
         'Cambio automatico',
         'Diagnosi',
         'Revisione',
+        'Tagliando',
       ]
     > &
       Schema.Attribute.DefaultTo<'Meccanico'>;
