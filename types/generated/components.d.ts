@@ -38,6 +38,7 @@ export interface CommonEnterpriseData extends Struct.ComponentSchema {
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 11;
       }>;
+    website: Schema.Attribute.String;
     whatsapp: Schema.Attribute.String;
   };
 }

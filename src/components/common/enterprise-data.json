@@ -27,6 +27,9 @@
     },
     "ig": {
       "type": "string"
+    },
+    "website": {
+      "type": "string"
     }
   },
   "config": {}
