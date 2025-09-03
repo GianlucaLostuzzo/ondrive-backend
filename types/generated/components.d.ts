@@ -30,6 +30,8 @@ export interface CommonEnterpriseData extends Struct.ComponentSchema {
   };
   attributes: {
     email: Schema.Attribute.Email;
+    fb: Schema.Attribute.String;
+    ig: Schema.Attribute.String;
     name: Schema.Attribute.String;
     phone: Schema.Attribute.String;
     vatnumber: Schema.Attribute.String &

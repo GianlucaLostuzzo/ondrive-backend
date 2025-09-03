@@ -21,6 +21,12 @@
     },
     "phone": {
       "type": "string"
+    },
+    "fb": {
+      "type": "string"
+    },
+    "ig": {
+      "type": "string"
     }
   },
   "config": {}
